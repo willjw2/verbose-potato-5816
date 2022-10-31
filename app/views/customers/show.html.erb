@@ -6,3 +6,10 @@
     <p>Supermarket: <%= item.supermarket.name %></p>
   </div>
 <% end %>
+
+<h2>Add an Item</h2>
+<%= form_with url: "/customers/#{@customer.id}", method: :patch, local: true do |form| %>
+  <%= form.label "Item ID:" %>
+  <%= form.text_field :item_id %>
+  <%= form.submit "Submit" %>
+<% end %>
