@@ -50,7 +50,6 @@ RSpec.describe 'Customer show page' do
 
     expect(current_path).to eq("/customers/#{customer.id}")
     # save_and_open_page
-    # require "pry"; binding.pry
     within("#item-#{item_1.id}") do
       expect(page).to have_content(item_1.name)
       expect(page).to have_content(item_1.price)
